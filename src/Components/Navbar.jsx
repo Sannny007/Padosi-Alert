@@ -1,8 +1,17 @@
 import { useState } from 'react'
 const NAV_LINKS = [
-  { href: '#how-it-works', label: 'How it works' },
-  { href: '#features',     label: 'Features' },
-  { href: '#app-preview',  label: 'App Preview' },
+  {
+    href: '#how-it-works',
+    label: 'How it works'
+  },
+  {
+    href: '#features',
+    label: 'Features'
+  },
+  {
+    href: '#app-preview',
+    label: 'App Preview'
+  },
 ]
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)

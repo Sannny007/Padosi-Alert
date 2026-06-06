@@ -1,14 +1,53 @@
 const ALERT_PILLS = [
-  { emoji: '🩸', label: 'B+ Needed',       distance: '0.4 km', pos: 'absolute -top-4 left-1/2 -translate-x-1/2' },
-  { emoji: '🚗', label: 'Ride Request',     distance: '0.8 km', pos: 'absolute top-1/2 -right-6 -translate-y-1/2' },
-  { emoji: '🆘', label: 'Medical',          distance: '1.1 km', pos: 'absolute bottom-10 right-2' },
-  { emoji: '💊', label: 'Medicine Needed',  distance: '1.3 km', pos: 'absolute bottom-24 -left-6' },
+  {
+    emoji: '🩸',
+    label: 'B+ Needed',
+    distance: '0.4 km',
+    pos: 'absolute -top-4 left-1/2 -translate-x-1/2'
+  },
+  {
+    emoji: '🚗',
+    label: 'Ride Request',
+    distance: '0.8 km',
+    pos: 'absolute top-1/2 -right-6 -translate-y-1/2'
+  },
+  {
+    emoji: '🆘',
+    label: 'Medical',
+    distance: '1.1 km', pos: 'absolute bottom-10 right-2'
+  },
+  {
+    emoji: '💊',
+    label: 'Medicine Needed',
+    distance: '1.3 km',
+    pos: 'absolute bottom-24 -left-6'
+  },
 ]
 const STATS = [
-  { label: 'Response Radius', value: '1–2',  suffix: 'KM',  red: true  },
-  { label: 'Alert Delivery',  value: '<30',  suffix: 'sec', red: false },
-  { label: 'Always Free',     value: '0',    suffix: '₹',   red: false },
-  { label: 'Active Network',  value: '24/7', suffix: '',    red: true  },
+  {
+    label: 'Response Radius',
+    value: '1–2',
+    suffix: 'KM',
+    red: true
+  },
+  {
+    label: 'Alert Delivery',
+    value: '<30',
+    suffix: 'sec',
+    red: false
+  },
+  {
+    label: 'Always Free',
+    value: '0',
+    suffix: '₹',
+    red: false
+  },
+  {
+    label: 'Active Network',
+    value: '24/7',
+    suffix: '',
+    red: true
+  },
 ]
 const Hero = () => {
   return (
@@ -38,7 +77,7 @@ const Hero = () => {
               Send a Test SOS
             </button>
             <a href="#features"
-               className="rounded-2xl border border-gray-600 bg-white/5 px-6 py-4 text-sm font-semibold
+              className="rounded-2xl border border-gray-600 bg-white/5 px-6 py-4 text-sm font-semibold
                           text-gray-200 transition hover:scale-105 hover:border-red-500 hover:text-white cursor-pointer">
               See how it works →
             </a>
@@ -51,7 +90,7 @@ const Hero = () => {
             <span className="absolute h-40 w-40 rounded-full border border-red-500/30" />
             {ALERT_PILLS.map((pill) => (
               <div key={pill.label}
-                   className={`${pill.pos} z-20 whitespace-nowrap rounded-full border border-zinc-800
+                className={`${pill.pos} z-20 whitespace-nowrap rounded-full border border-zinc-800
                                bg-zinc-950 px-3 py-1.5 text-xs text-white shadow-lg`}>
                 {pill.emoji} {pill.label} • {pill.distance}
               </div>

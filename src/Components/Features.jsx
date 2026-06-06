@@ -21,18 +21,62 @@ const STEPS = [
 ]
 
 const FEATURES = [
-  { emoji: '🩸', title: 'Blood Emergency',    tag: 'Life-saving', description: 'Connect blood donors and seekers in your area instantly. Get any blood type in minutes, not hours.' },
-  { emoji: '🏥', title: 'Medical SOS',         tag: 'Critical',    description: 'First aid from a trained neighbor can arrive before any ambulance. Alert your 1 km radius instantly.' },
-  { emoji: '🔥', title: 'Fire Alert',          tag: 'Urgent',      description: 'Broadcast fire emergencies to your entire neighborhood in under 30 seconds. Speed saves lives.' },
-  { emoji: '🚗', title: 'Vehicle Breakdown',   tag: 'Practical',   description: 'Stranded on the road? Get a push, a jump cable, or a safe ride from a neighbor nearby.' },
-  { emoji: '💊', title: 'Medicine Needed',     tag: 'Helpful',     description: 'Need urgent medicine at midnight? A neighbor 300 meters away might have exactly what you need.' },
-  { emoji: '🛡️', title: 'Verified Network',   tag: 'Secure',      description: 'Neighborhood-verified members only. Safety and privacy protected by our community trust system.' },
+  {
+    emoji: '🩸', 
+    title: 'Blood Emergency',
+    tag: 'Life-saving', 
+    description: 'Connect blood donors and seekers in your area instantly. Get any blood type in minutes, not hours.'
+  },
+  {
+    emoji: '🏥', title: 'Medical SOS',
+    tag: 'Critical',
+    description: 'First aid from a trained neighbor can arrive before any ambulance. Alert your 1 km radius instantly.'
+  },
+  {
+    emoji: '🔥',
+    title: 'Fire Alert',
+    tag: 'Urgent',
+    description: 'Broadcast fire emergencies to your entire neighborhood in under 30 seconds. Speed saves lives.'
+  },
+  {
+    emoji: '🚗',
+    title: 'Vehicle Breakdown',
+    tag: 'Practical',
+    description: 'Stranded on the road? Get a push, a jump cable, or a safe ride from a neighbor nearby.'
+  },
+  {
+    emoji: '💊',
+    title: 'Medicine Needed',
+    tag: 'Helpful',
+    description: 'Need urgent medicine at midnight? A neighbor 300 meters away might have exactly what you need.'
+  },
+  {
+    emoji: '🛡️',
+    title: 'Verified Network',
+    tag: 'Secure',
+    description: 'Neighborhood-verified members only. Safety and privacy protected by our community trust system.'
+  },
 ]
 
 const APP_ALERTS = [
-  { label: 'Blood Needed — B+',  sub: 'Sector 12 Hospital · 0.4 km', time: '3 min ago',  dot: 'bg-red-500' },
-  { label: 'Medical Emergency',  sub: 'Near Railway Colony · 0.8 km', time: '8 min ago',  dot: 'bg-red-600' },
-  { label: 'Vehicle Request',    sub: 'Main Market Gate · 1.2 km',   time: '14 min ago', dot: 'bg-gray-500' },
+  {
+    label: 'Blood Needed — B+',
+    sub: 'Sector 12 Hospital · 0.4 km',
+    time: '3 min ago',
+    dot: 'bg-red-500'
+  },
+  {
+    label: 'Medical Emergency',
+    sub: 'Near Railway Colony · 0.8 km',
+    time: '8 min ago',
+    dot: 'bg-red-600'
+  },
+  {
+    label: 'Vehicle Request',
+    sub: 'Main Market Gate · 1.2 km',
+    time: '14 min ago',
+    dot: 'bg-gray-500'
+  },
 ]
 
 const SectionLabel = ({ text }) => (
@@ -40,7 +84,7 @@ const SectionLabel = ({ text }) => (
 )
 
 const Features = () => {
-  const [email, setEmail]       = useState('')
+  const [email, setEmail] = useState('')
   const [submitted, setSubmitted] = useState(false)
 
   const handleSubmit = () => {
@@ -63,7 +107,7 @@ const Features = () => {
           <div className="grid gap-6 md:grid-cols-3">
             {STEPS.map((step, i) => (
               <div key={step.number}
-                   className="group relative rounded-2xl border border-gray-800 bg-gray-950 p-8
+                className="group relative rounded-2xl border border-gray-800 bg-gray-950 p-8
                               transition hover:border-red-800 hover:bg-red-950/10">
                 <div className="mb-6 flex items-start justify-between">
                   <span className="text-6xl font-extrabold leading-none text-gray-800
@@ -100,7 +144,7 @@ const Features = () => {
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {FEATURES.map((feature) => (
               <div key={feature.title}
-                   className="group rounded-2xl border border-gray-800 bg-gray-950 p-6
+                className="group rounded-2xl border border-gray-800 bg-gray-950 p-6
                               transition hover:border-red-800 hover:bg-red-950/10">
                 <div className="mb-4 flex items-start justify-between">
                   <span className="text-3xl">{feature.emoji}</span>
@@ -160,7 +204,7 @@ const Features = () => {
                     <div className="space-y-2">
                       {APP_ALERTS.map((alert) => (
                         <div key={alert.label}
-                             className="flex items-start gap-2.5 rounded-xl border border-gray-800 bg-zinc-900/80 p-3">
+                          className="flex items-start gap-2.5 rounded-xl border border-gray-800 bg-zinc-900/80 p-3">
                           <span className={`mt-1.5 h-2 w-2 shrink-0 rounded-full ${alert.dot}`} />
                           <div>
                             <p className="text-xs font-semibold leading-tight text-white">{alert.label}</p>
